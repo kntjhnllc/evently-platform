@@ -5,7 +5,7 @@ import { SearchParamProps } from '@/types'
 import Image from 'next/image';
 import React from 'react'
 
-const EventDeatils = async ( {params: { id }, searchParams}: SearchParamProps) => {
+const EventDetails = async ( {params: { id }, searchParams}: SearchParamProps) => {
     const event = await getEventById(id);
 
     const relatedEvents = await getRelatedEventsByCategory({
@@ -97,4 +97,4 @@ const EventDeatils = async ( {params: { id }, searchParams}: SearchParamProps) =
     )
 }
 
-export default EventDeatils
+export default EventDetails
