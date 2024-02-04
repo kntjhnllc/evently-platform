@@ -10,6 +10,8 @@ For practice and future references
 
 -TailwindCSS
 
+-Clerk
+
 -Stripe
 
 -Zod
