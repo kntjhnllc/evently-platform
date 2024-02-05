@@ -9,6 +9,15 @@ const UserSchema = new Schema({
     photo: {type: String, required: true},
 })
 
+
+// Middleware to handle null lastName before saving
+UserSchema.pre('save', function (next) {
+    if (this.lastName === null) {
+        this.lastName = "";
+    }
+    next();
+});
+
 const User = models.User || model('User', UserSchema)
 
 export default User;
