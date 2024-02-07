@@ -21,6 +21,7 @@ export type IOrderItem = {
   createdAt: Date
   eventTitle: string
   eventId: string
+  buyerEmail: string
   buyer: string
 }
 
